@@ -41,18 +41,7 @@
         "com_istat_code",
         "PROCOM ISTAT_testo"
       ],
-      "label_key": "TITOLO INTERVENTO",
-      "features_detail": [
-        {
-          "layer": 0,
-          "featureInfo": [
-            {
-              "name": "PROCOM ISTAT_testo",
-              "label": "PROCOM"
-            }
-          ]
-        }
-      ]
+      "label_key": "TITOLO INTERVENTO"
     }
   ]
 }
