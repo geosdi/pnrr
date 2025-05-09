@@ -1,0 +1,58 @@
+{
+  "global_legend": "",
+  "name": "PNNR",
+  "header_popup": "PNNR",
+  "feature_sidebar": true,
+  "strategy_features": "not_intersect",
+  "sidebar_config": {
+    "header": true,
+    "values": [
+      {
+        "layer": 0,
+        "key": "name",
+        "prefix": "Comune: "
+      }
+    ]
+  },
+  "layers": [
+    {
+      "key": 0,
+      "label": "Comuni"
+    }
+  ],
+  "today": {
+    "topo_json": [
+      "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/comuni.topojson"
+    ]
+  },
+  "style": [
+    {
+      "layer": 0,
+      "url": "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/pnnr_style.json"
+    }
+  ],
+  "join": [
+    {
+      "title": "Totale Progetti: ",
+      "layer": 0,
+      "key": 0,
+      "file": "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/dati_PNRR_TabellaBase.json",
+      "keys": [
+        "com_istat_code",
+        "PROCOM ISTAT_testo"
+      ],
+      "label_key": "TITOLO INTERVENTO",
+      "features_detail": [
+        {
+          "layer": 0,
+          "featureInfo": [
+            {
+              "name": "PROCOM ISTAT_testo",
+              "label": "PROCOM"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
