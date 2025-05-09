@@ -1,0 +1,71 @@
+{
+  "style_properties": [
+    {
+      "propertyKey": "join:tot(*)",
+      "properties": [
+        {
+          "property": "fillColor",
+          "values": [
+            {
+              "key": [
+                0,
+                5
+              ],
+              "value": "#04FC67"
+            }
+          ]
+        },
+        {
+          "property": "fillColor",
+          "values": [
+            {
+              "key": [
+                5,
+                10
+              ],
+              "value": "#FFFF06"
+            }
+          ]
+        },
+        {
+          "property": "fillColor",
+          "values": [
+            {
+              "key": [
+                10
+              ],
+              "value": "#FF1606"
+            }
+          ]
+        },
+        {
+          "property": "weight",
+          "values": [
+            {
+              "key": "*",
+              "value": "0.5"
+            }
+          ]
+        },
+        {
+          "property": "fillOpacity",
+          "values": [
+            {
+              "key": "*",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "property": "fillOpacity",
+          "values": [
+            {
+              "key": "*",
+              "value": "0.7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
