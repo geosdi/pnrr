@@ -33,7 +33,7 @@
   ],
   "join": [
     {
-      "title": "Totale Progetti: ",
+      "title": "Totale Progetti",
       "layer": 0,
       "key": 0,
       "file": "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/dati_PNRR_TabellaBase.json",
@@ -41,7 +41,24 @@
         "com_istat_code",
         "PROCOM ISTAT_testo"
       ],
-      "label_key": "TITOLO INTERVENTO"
+      "label_key": "TITOLO INTERVENTO",
+      "feature_properties": [
+        {
+          "extra_properties": [
+            {
+              "property": "CUP",
+              "type": "group",
+              "property_key": "Comune_Istat",
+              "label": "Altri comuni interessati"
+            }
+          ],
+          "order_properties": [
+            "Comune_Istat",
+            "Regione",
+            "CUP"
+          ]
+        }
+      ]
     }
   ]
 }
