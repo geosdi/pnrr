@@ -9,9 +9,21 @@
             {
               "key": [
                 0,
+                2
+              ],
+              "value": "#83cdff"
+            }
+          ]
+        },
+        {
+          "property": "fillColor",
+          "values": [
+            {
+              "key": [
+                2,
                 5
               ],
-              "value": "#04FC67"
+              "value": "#52baff"
             }
           ]
         },
@@ -23,7 +35,7 @@
                 5,
                 10
               ],
-              "value": "#FFFF06"
+              "value": "#10a3ff"
             }
           ]
         },
@@ -32,9 +44,21 @@
           "values": [
             {
               "key": [
-                10
+                10,
+                20
               ],
-              "value": "#FF1606"
+              "value": "#0d86d1"
+            }
+          ]
+        },
+        {
+          "property": "fillColor",
+          "values": [
+            {
+              "key": [
+                20
+              ],
+              "value": "#0a659a"
             }
           ]
         },
@@ -44,15 +68,6 @@
             {
               "key": "*",
               "value": "0.5"
-            }
-          ]
-        },
-        {
-          "property": "fillOpacity",
-          "values": [
-            {
-              "key": "*",
-              "value": "1"
             }
           ]
         },
