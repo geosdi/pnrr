@@ -4,7 +4,23 @@
   "header_popup": "PNNR",
   "feature_sidebar": true,
   "strategy_features": "not_intersect",
+  "leaflet": {
+    "tooltip": [
+      {
+        "key": 0,
+        "properties": [
+          {
+            "key": "name"
+          }
+        ]
+      }
+    ]
+  },
   "sidebar_config": {
+    "component": {
+      "type": "accordion",
+      "always": true
+    },
     "header": true,
     "values": [
       {
@@ -42,6 +58,14 @@
         "PROCOM ISTAT_testo"
       ],
       "label_key": "TITOLO INTERVENTO",
+      "show_other_features": [
+        "CUP"
+      ],
+      "leaflet": {
+        "tooltip": {
+          "label": "Tot. Progetti"
+        }
+      },
       "feature_properties": [
         {
           "extra_properties": [
