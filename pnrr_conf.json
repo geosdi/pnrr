@@ -54,8 +54,8 @@
       "key": 0,
       "file": "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/dati_PNRR_TabellaBase.json",
       "keys": [
-        "com_istat_code",
-        "PROCOM ISTAT_testo"
+        "com_istat_code_num",
+        "PROCOM ISTAT_numero"
       ],
       "label_key": "TITOLO INTERVENTO",
       "show_other_features": [
