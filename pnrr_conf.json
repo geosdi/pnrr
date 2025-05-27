@@ -102,6 +102,12 @@
             "TIPOLOGIA INTERVENTO",
             "StatoLavori"
           ],
+          "detail_properties": [
+            {
+              "name": "Valore_Progetto",
+              "label": "Finanziamento Totale"
+            }
+          ],
           "extra_properties": [
             {
               "property": "CUP",
