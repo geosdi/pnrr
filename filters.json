@@ -1,0 +1,27 @@
+{
+  "form_groups": [
+    {
+      "fields": [
+        {
+          "field_type": "DROPDOWN",
+          "placeholder": "PROGETTO IN ESSERE/NUOVO",
+          "binding_key": "PROGETTO IN ESSERE/NUOVO",
+          "options": [
+            {
+              "name": "E",
+              "value": "E"
+            },
+            {
+              "name": "N",
+              "value": "N"
+            }
+          ]
+        },
+        {
+          "field_type": "BUTTON"
+        }
+      ]
+    }
+  ],
+  "label_total": "Totali Progetti:"
+}
