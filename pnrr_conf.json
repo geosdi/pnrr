@@ -108,6 +108,11 @@
               "type": "group",
               "property_key": "Comune_Istat",
               "label": "Altri comuni interessati"
+            },
+            {
+              "property": "Valore_Progetto",
+              "property_key": "Valore_Progetto",
+              "label": "Finanziamento Totale"
             }
           ],
           "fixed_properties": [
