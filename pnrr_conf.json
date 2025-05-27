@@ -10,7 +10,7 @@
         "key": 0,
         "properties": [
           {
-            "key": "name"
+            "key": "COMUNE"
           }
         ]
       }
@@ -26,7 +26,20 @@
       {
         "layer": 0,
         "key": "name",
-        "prefix": "Comune: "
+        "prefix": "Comune: ",
+        "type": "h2"
+      },
+      {
+        "layer": 0,
+        "key": "prov_name",
+        "prefix": "Provincia: ",
+        "type": "h3"
+      },
+      {
+        "layer": 0,
+        "key": "reg_name",
+        "prefix": "Regione: ",
+        "type": "h3"
       }
     ]
   },
@@ -38,7 +51,17 @@
   ],
   "today": {
     "topo_json": [
-      "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/comuni.topojson"
+      {
+        "layer": 0,
+        "tileserver": "https://tileserver.geosdi.org/data/istat-2025/{z}/{x}/{y}.pbf",
+        "options": {
+          "name": "comuni_istat_2025",
+          "procom_comune_key_tileserver": "PRO_COM",
+          "type": "comuni",
+          "url": "https://raw.githubusercontent.com/openpolis/geojson-italy/refs/heads/master/topojson/limits_IT_municipalities.topo.json",
+          "procom_comune_key_json": "com_istat_code_num"
+        }
+      }
     ]
   },
   "style": [
@@ -54,7 +77,7 @@
       "key": 0,
       "file": "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/dati_PNRR_TabellaBase.json",
       "keys": [
-        "com_istat_code_num",
+        "PRO_COM",
         "PROCOM ISTAT_numero"
       ],
       "label_key": "TITOLO INTERVENTO",
@@ -68,6 +91,17 @@
       },
       "feature_properties": [
         {
+          "visible_properties": [
+            "CUP",
+            "SOGGETTO ATTUATORE",
+            "Altri comuni interessati",
+            "PROGETTO IN ESSERE/NUOVO",
+            "Finanziamento_PNRR",
+            "Valore_Progetto",
+            "CATEGORIA INTERVENTO",
+            "TIPOLOGIA INTERVENTO",
+            "StatoLavori"
+          ],
           "extra_properties": [
             {
               "property": "CUP",
@@ -76,10 +110,21 @@
               "label": "Altri comuni interessati"
             }
           ],
+          "fixed_properties": [
+            "CUP",
+            "SOGGETTO ATTUATORE",
+            "Altri comuni interessati"
+          ],
           "order_properties": [
-            "Comune_Istat",
-            "Regione",
-            "CUP"
+            "CUP",
+            "SOGGETTO ATTUATORE",
+            "Altri comuni interessati",
+            "PROGETTO IN ESSERE/NUOVO",
+            "Finanziamento_PNRR",
+            "Valore_Progetto",
+            "CATEGORIA INTERVENTO",
+            "TIPOLOGIA INTERVENTO",
+            "StatoLavori"
           ]
         }
       ]
