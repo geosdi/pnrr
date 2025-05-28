@@ -70,6 +70,32 @@
       "url": "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/pnnr_style.json"
     }
   ],
+  "filter_config": {
+    "url": "http://localhost:4200/geojson/pnrr/filters.json",
+    "refresh": true,
+    "filters_type": [
+      {
+        "filter_function": "textInclude",
+        "binding_key": "PROGETTO IN ESSERE/NUOVO",
+        "filter_on_fields": [
+          "PROGETTO IN ESSERE/NUOVO"
+        ],
+        "layers": [
+          0
+        ]
+      },
+      {
+        "filter_function": "textInclude",
+        "binding_key": "Regione",
+        "filter_on_fields": [
+          "Regione"
+        ],
+        "layers": [
+          0
+        ]
+      }
+    ]
+  },
   "join": [
     {
       "title": "Totale Progetti",
