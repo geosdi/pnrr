@@ -71,7 +71,7 @@
     }
   ],
   "filter_config": {
-    "url": "http://localhost:4200/geojson/pnrr/filters.json",
+    "url": "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/filters.json",
     "refresh": true,
     "filters_type": [
       {
