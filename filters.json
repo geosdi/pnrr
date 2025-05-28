@@ -8,14 +8,19 @@
           "binding_key": "PROGETTO IN ESSERE/NUOVO",
           "options": [
             {
-              "name": "E",
+              "name": "In Essere",
               "value": "E"
             },
             {
-              "name": "N",
+              "name": "Nuovo",
               "value": "N"
             }
           ]
+        },
+        {
+          "field_type": "TEXT",
+          "placeholder": "Regione",
+          "binding_key": "Regione"
         },
         {
           "field_type": "BUTTON"
