@@ -5,6 +5,11 @@
   "feature_sidebar": true,
   "strategy_features": "not_intersect",
   "leaflet": {
+    "options": {
+      "scrollWheelZoom": false,
+      "smoothSensitivity": 5,
+      "smoothWheelZoom": true
+    },
     "tooltip": [
       {
         "key": 0,
@@ -56,10 +61,10 @@
         "tileserver": "https://tileserver.geosdi.org/data/istat-2025/{z}/{x}/{y}.pbf",
         "options": {
           "name": "comuni_istat_2025",
-          "procom_comune_key_tileserver": "PRO_COM",
+          "key_tileserver": "PRO_COM",
           "type": "comuni",
           "url": "https://raw.githubusercontent.com/openpolis/geojson-italy/refs/heads/master/topojson/limits_IT_municipalities.topo.json",
-          "procom_comune_key_json": "com_istat_code_num"
+          "key_json": "com_istat_code_num"
         }
       }
     ]
