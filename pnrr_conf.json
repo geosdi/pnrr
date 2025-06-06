@@ -1,7 +1,7 @@
 {
   "global_legend": "",
   "name": "PNNR",
-  "header_popup": "PNNR",
+  "header_popup": "",
   "feature_sidebar": true,
   "strategy_features": "not_intersect",
   "leaflet": {
