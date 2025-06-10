@@ -1,9 +1,19 @@
 {
   "global_legend": "",
-  "name": "",
+  "name": "PNNR",
   "header_popup": "PNNR",
   "feature_sidebar": true,
   "strategy_features": "not_intersect",
+  "logo": [
+    {
+      "key": "logoWhiteSrc",
+      "src": "./assets/images/logo/pnnr/pnnr_logo_white.svg"
+    },
+    {
+      "key": "logoBlackSrc",
+      "src": "./assets/images/logo/pnnr/pnnr_logo_black.svg"
+    }
+  ],
   "leaflet": {
     "options": {
       "scrollWheelZoom": false,
@@ -136,7 +146,49 @@
           "detail_properties": [
             {
               "name": "Valore_Progetto",
-              "label": "Finanziamento Totale"
+              "label": "Finanziamento Totale",
+              "options": {
+                "suffix": "€"
+              }
+            },
+            {
+              "name": "Finanziamento_PNRR",
+              "label": "Finanziamento PNRR",
+              "options": {
+                "suffix": "€"
+              }
+            },
+            {
+              "name": "SOGGETTO ATTUATORE",
+              "label": "Soggetto Attuatore"
+            },
+            {
+              "name": "CATEGORIA INTERVENTO",
+              "label": "Categoria Intervento"
+            },
+            {
+              "name": "TIPOLOGIA INTERVENTO",
+              "label": "Tipologia Intervento",
+              "values": [
+                {
+                  "D": "art. 25, comma 2, lett. E del d.lgs. n. 1/2018",
+                  "E": "art. 25, comma 2, lett. E del d.lgs. n. 1/2018"
+                }
+              ]
+            },
+            {
+              "name": "StatoLavori",
+              "label": "Stato Lavori"
+            },
+            {
+              "name": "PROGETTO IN ESSERE/NUOVO",
+              "label": "Progetto In Essere/Nuovo",
+              "values": [
+                {
+                  "N": "Nuovo",
+                  "E": "In Essere"
+                }
+              ]
             }
           ],
           "extra_properties": [
