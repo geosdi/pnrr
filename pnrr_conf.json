@@ -1,17 +1,19 @@
 {
   "global_legend": "",
-  "name": "dati aggiornati al 22 maggio 2025",
-  "header_popup": "PNRR",
+  "name": "PNNR",
+  "header_popup": "PNNR",
   "feature_sidebar": true,
   "strategy_features": "not_intersect",
   "logo": [
     {
       "key": "logoWhiteSrc",
-      "src": "./assets/images/logo/pnnr/pnnr_logo_white.svg"
+      "src": "./assets/images/logo/pnnr/DPC_ID_Logo Bianco.svg",
+      "width": "500px"
     },
     {
       "key": "logoBlackSrc",
-      "src": "./assets/images/logo/pnnr/pnnr_logo_black.svg"
+      "src": "./assets/images/logo/pnnr/DPC_ID_Logo Nero.svg",
+      "width": "500px"
     }
   ],
   "leaflet": {
@@ -122,7 +124,7 @@
         "PROCOM ISTAT_numero"
       ],
       "label_key": "TITOLO INTERVENTO",
-      "show_other_features": [
+      "show_other_features_based_by": [
         "CUP"
       ],
       "leaflet": {
