@@ -8,12 +8,12 @@
     {
       "key": "logoWhiteSrc",
       "src": "./assets/images/logo/pnnr/DPC_ID_Logo Bianco.svg",
-      "width": "500px"
+      "width": "400px"
     },
     {
       "key": "logoBlackSrc",
       "src": "./assets/images/logo/pnnr/DPC_ID_Logo Nero.svg",
-      "width": "500px"
+      "width": "400px"
     }
   ],
   "leaflet": {
