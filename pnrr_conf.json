@@ -75,7 +75,7 @@
           "name": "comuni_istat_2025",
           "key_tileserver": "PRO_COM",
           "type": "comuni",
-          "url": "https://raw.githubusercontent.com/openpolis/geojson-italy/refs/heads/master/topojson/limits_IT_municipalities.topo.json",
+          "url": "https://raw.githubusercontent.com/geosdi/geosdi-data/refs/heads/main/limits_IT_municipalities.topo.json",
           "key_json": "com_istat_code_num"
         }
       }
