@@ -1,224 +1,182 @@
 {
-  "global_legend": "",
-  "name": "Dati aggiornati al 31 ottobre 2026",
-  "header_popup": "PNNR",
-  "feature_sidebar": true,
-  "strategy_features": "not_intersect",
-  "logo": [
-    {
-      "key": "logoWhiteSrc",
-      "src": "./assets/images/logo/pnnr/DPC_ID_Logo Bianco.svg",
-      "width": "400px"
-    },
-    {
-      "key": "logoBlackSrc",
-      "src": "./assets/images/logo/pnnr/DPC_ID_Logo Nero.svg",
-      "width": "400px"
+  "name": "Attuazione misure PNRR",
+  "description": "Dati aggiornati al 31 ottobre 2026",
+  "logo": {
+    "hiddenDpcLogo": true,
+    "secondaryLogo": {
+      "url": "./assets/images/logo/pnnr/pnnr_logo_white.svg"
     }
-  ],
-  "leaflet": {
-    "options": {
-      "scrollWheelZoom": false,
-      "smoothSensitivity": 5,
-      "smoothWheelZoom": true
-    },
-    "tooltip": [
-      {
-        "key": 0,
-        "properties": [
-          {
-            "key": "COMUNE"
-          }
-        ]
-      }
-    ]
-  },
-  "sidebar_config": {
-    "component": {
-      "type": "accordion",
-      "always": true
-    },
-    "header": true,
-    "values": [
-      {
-        "layer": 0,
-        "key": "name",
-        "prefix": "Comune: ",
-        "type": "h2"
-      },
-      {
-        "layer": 0,
-        "key": "prov_name",
-        "prefix": "Provincia: ",
-        "type": "h3"
-      },
-      {
-        "layer": 0,
-        "key": "reg_name",
-        "prefix": "Regione: ",
-        "type": "h3"
-      }
-    ]
   },
   "layers": [
     {
+      "layerIndex": 0,
       "key": 0,
-      "label": "Comuni"
-    }
-  ],
-  "today": {
-    "topo_json": [
-      {
-        "layer": 0,
-        "tileserver": "https://tileserver.geosdi.org/data/istat-2025/{z}/{x}/{y}.pbf",
-        "options": {
-          "name": "comuni_istat_2025",
-          "key_tileserver": "PRO_COM",
-          "type": "comuni",
-          "url": "https://raw.githubusercontent.com/geosdi/geosdi-data/refs/heads/main/limits_IT_municipalities.topo.json",
-          "key_json": "com_istat_code_num"
-        }
-      }
-    ]
-  },
-  "style": [
-    {
-      "layer": 0,
-      "url": "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/pnnr_style.json"
-    }
-  ],
-  "filter_config": {
-    "url": "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/filters.json",
-    "refresh": true,
-    "filters_type": [
-      {
-        "filter_function": "textInclude",
-        "binding_key": "PROGETTO IN ESSERE/NUOVO",
-        "filter_on_fields": [
-          "PROGETTO IN ESSERE/NUOVO"
-        ],
-        "layers": [
-          0
+      "label": "Comuni",
+      "visible": true,
+      "url": "https://raw.githubusercontent.com/geosdi/geosdi-data/refs/heads/main/limits_IT_municipalities.topo.json",
+      "style": "./geojson/pnrr/pnnr_style.json",
+      "tooltip": {
+        "properties": [
+          {
+            "key": "name"
+          }
         ]
       },
-      {
-        "filter_function": "textInclude",
-        "binding_key": "Regione",
-        "filter_on_fields": [
-          "Regione"
-        ],
-        "layers": [
-          0
+      "topology": {
+        "object": "comuni",
+        "featureKey": "com_istat_code_2024_num",
+        "header": [
+          { "key": "name", "title": "Comune: ", "htmlTag": "h2" },
+          { "key": "prov_name", "title": "Provincia: ", "htmlTag": "h3" },
+          { "key": "reg_name", "title": "Regione: ", "htmlTag": "h3" }
         ]
+      }
+    }
+  ],
+  "featureInfoComponent": {
+    "sidebar": true,
+    "component": {
+      "type": "accordion",
+      "always": true
+    }
+  },
+  "filterConfig": {
+    "forms": {
+      "fields": [
+        {
+          "fieldType": "DROPDOWN",
+          "placeholder": "PROGETTO IN ESSERE/NUOVO",
+          "filterKey": "PROGETTO IN ESSERE/NUOVO",
+          "showClear": true,
+          "options": [
+            {
+              "name": "In Essere",
+              "value": "E"
+            },
+            {
+              "name": "Nuovo",
+              "value": "N"
+            }
+          ]
+        },
+        {
+          "fieldType": "TEXT",
+          "placeholder": "Regione",
+          "filterKey": "Regione"
+        },
+        {
+          "fieldType": "BUTTON"
+        }
+      ]
+    },
+    "filtersType": [
+      {
+        "filterFunction": "eq",
+        "operator": "or",
+        "filterKey": "PROGETTO IN ESSERE/NUOVO",
+        "filterOnFields": ["PROGETTO IN ESSERE/NUOVO"],
+        "layers": [0]
+      },
+      {
+        "filterFunction": "contains",
+        "operator": "or",
+        "filterKey": "Regione",
+        "filterOnFields": ["Regione"],
+        "layers": [0]
       }
     ]
   },
   "join": [
     {
-      "title": "Totale Progetti",
       "layer": 0,
-      "key": 0,
-      "file": "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/dati_PNRR_TabellaBase.json",
-      "keys": [
-        "PRO_COM",
-        "PROCOM ISTAT_numero"
-      ],
-      "label_key": "TITOLO INTERVENTO",
-      "show_other_features_based_by": [
-        "CUP"
-      ],
-      "leaflet": {
-        "tooltip": {
-          "label": "Tot. Progetti"
-        }
-      },
-      "feature_properties": [
-        {
-          "visible_properties": [
-            "CUP",
-            "SOGGETTO ATTUATORE",
-            "Altri comuni interessati",
-            "PROGETTO IN ESSERE/NUOVO",
-            "Finanziamento_PNRR",
-            "Valore_Progetto",
-            "CATEGORIA INTERVENTO",
-            "TIPOLOGIA INTERVENTO",
-            "StatoLavori"
-          ],
-          "detail_properties": [
-            {
-              "name": "Valore_Progetto",
-              "label": "Finanziamento Totale",
-              "options": {
-                "suffix": "€"
-              }
-            },
-            {
-              "name": "Finanziamento_PNRR",
-              "label": "Finanziamento PNRR",
-              "options": {
-                "suffix": "€"
-              }
-            },
-            {
-              "name": "SOGGETTO ATTUATORE",
-              "label": "Soggetto Attuatore"
-            },
-            {
-              "name": "CATEGORIA INTERVENTO",
-              "label": "Categoria Intervento"
-            },
-            {
-              "name": "TIPOLOGIA INTERVENTO",
-              "label": "Tipologia Intervento",
-              "values": [
-                {
-                  "D": "art. 25, comma 2, lett. D del d.lgs. n. 1/2018",
-                  "E": "art. 25, comma 2, lett. E del d.lgs. n. 1/2018"
-                }
-              ]
-            },
-            {
-              "name": "StatoLavori",
-              "label": "Stato Lavori"
-            },
-            {
-              "name": "PROGETTO IN ESSERE/NUOVO",
-              "label": "Progetto In Essere/Nuovo",
-              "values": [
-                {
-                  "N": "Nuovo",
-                  "E": "In Essere"
-                }
-              ]
+      "title": "Totale Progetti",
+      "url": "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/dati_PNRR_TabellaBase.json",
+      "layerKey": "com_istat_code_2024_num",
+      "dataKey": "PROCOM ISTAT_numero",
+      "labelKey": "TITOLO INTERVENTO",
+      "highlightBy": ["CUP"],
+      "tooltipLabel": "Tot. Progetti",
+      "featureProperties": {
+        "visibleProperties": [
+          "CUP",
+          "SOGGETTO ATTUATORE",
+          "Altri comuni interessati",
+          "PROGETTO IN ESSERE/NUOVO",
+          "Finanziamento_PNRR",
+          "Valore_Progetto",
+          "CATEGORIA INTERVENTO",
+          "TIPOLOGIA INTERVENTO",
+          "StatoLavori"
+        ],
+        "orderProperties": [
+          "CUP",
+          "SOGGETTO ATTUATORE",
+          "Altri comuni interessati",
+          "PROGETTO IN ESSERE/NUOVO",
+          "Finanziamento_PNRR",
+          "Valore_Progetto",
+          "CATEGORIA INTERVENTO",
+          "TIPOLOGIA INTERVENTO",
+          "StatoLavori"
+        ],
+        "fixedProperties": [
+          "CUP",
+          "SOGGETTO ATTUATORE",
+          "Altri comuni interessati"
+        ],
+        "detailProperties": [
+          {
+            "name": "Valore_Progetto",
+            "label": "Finanziamento Totale",
+            "options": {
+              "suffix": "€"
             }
-          ],
-          "extra_properties": [
-            {
-              "property": "CUP",
-              "type": "group",
-              "property_key": "Comune_Istat",
-              "label": "Altri comuni interessati"
+          },
+          {
+            "name": "Finanziamento_PNRR",
+            "label": "Finanziamento PNRR",
+            "options": {
+              "suffix": "€"
             }
-          ],
-          "fixed_properties": [
-            "CUP",
-            "SOGGETTO ATTUATORE",
-            "Altri comuni interessati"
-          ],
-          "order_properties": [
-            "CUP",
-            "SOGGETTO ATTUATORE",
-            "Altri comuni interessati",
-            "PROGETTO IN ESSERE/NUOVO",
-            "Finanziamento_PNRR",
-            "Valore_Progetto",
-            "CATEGORIA INTERVENTO",
-            "TIPOLOGIA INTERVENTO",
-            "StatoLavori"
-          ]
-        }
-      ]
+          },
+          {
+            "name": "SOGGETTO ATTUATORE",
+            "label": "Soggetto Attuatore"
+          },
+          {
+            "name": "CATEGORIA INTERVENTO",
+            "label": "Categoria Intervento"
+          },
+          {
+            "name": "TIPOLOGIA INTERVENTO",
+            "label": "Tipologia Intervento",
+            "replaceValues": {
+              "D": "art. 25, comma 2, lett. D del d.lgs. n. 1/2018",
+              "E": "art. 25, comma 2, lett. E del d.lgs. n. 1/2018"
+            }
+          },
+          {
+            "name": "StatoLavori",
+            "label": "Stato Lavori"
+          },
+          {
+            "name": "PROGETTO IN ESSERE/NUOVO",
+            "label": "Progetto In Essere/Nuovo",
+            "replaceValues": {
+              "N": "Nuovo",
+              "E": "In Essere"
+            }
+          }
+        ],
+        "extraProperties": [
+          {
+            "property": "CUP",
+            "type": "group",
+            "propertyKey": "Comune_Istat",
+            "label": "Altri comuni interessati"
+          }
+        ]
+      }
     }
   ]
 }
