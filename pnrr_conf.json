@@ -14,7 +14,7 @@
       "label": "Comuni",
       "visible": true,
       "url": "https://raw.githubusercontent.com/geosdi/geosdi-data/refs/heads/main/limits_IT_municipalities.topo.json",
-      "style": "./geojson/pnrr/pnnr_style.json",
+      "style": "https://raw.githubusercontent.com/geosdi/pnrr/refs/heads/main/pnnr_style.json",
       "tooltip": {
         "properties": [
           {
